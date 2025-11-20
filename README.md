@@ -15,7 +15,7 @@ VPC Network – Custom network to organize cloud resources
 
 Subnet – Regional private IP range inside the VPC
 
-Firewall Rules – Allow essential traffic (HTTP/HTTPS)
+Firewall Rules – Allow essential traffic (HTTP)
 
 Cloud Storage Bucket – Stores static website content
 
@@ -26,7 +26,7 @@ Backend Bucket – Allows the load balancer to use the bucket as a content origi
 # High-Level Architecture Diagram (Conceptual)
 Internet
    |
-HTTP(S) Load Balancer (Global)
+HTTP Load Balancer (Global)
    |
 Backend Bucket (Static Website Content)
    |
@@ -46,7 +46,7 @@ Added one subnet in the desired region
 
 Created firewall rules under the same VPC network
 
-Allowed HTTP (80) and HTTPS (443)
+Allowed HTTP (80)
 
 3. Created a Cloud Storage Bucket
 
@@ -60,7 +60,7 @@ Navigated to Network Services → Load Balancing
 
 Created a Global HTTP Load Balancer
 
-Selected Backend Bucket as the backend type
+Selected Instance Group as the backend type
 
 Chose the Cloud Storage bucket created earlier as the content origin
 
@@ -104,7 +104,7 @@ Understanding static website deployment architecture
 
 # Key Learning Outcomes
 
-How to route global traffic through a load balancer
-How Cloud Storage can be used as a static origin
-How networks and firewall rules apply to cloud resources even if compute instances are not used
-Importance of proper resource structuring for cloud deployments
+   How to route global traffic through a load balancer
+   How Cloud Storage can be used as a static origin
+   How networks and firewall rules apply to cloud resources even if compute instances are not used
+   Importance of proper resource structuring for cloud deployments
